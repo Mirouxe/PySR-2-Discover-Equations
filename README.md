@@ -6,7 +6,9 @@ La bibliothèque **PySR** a été développé par Miles Cranmer et d'autres coll
 
 ## Fonctionnalités
 
-- Génération de données d'entrée selon une fonction polynomiale simple (par exemple, \(y = x_1^2 + x_2^3\)).
+- Génération de données d'entrée. L'exemple porte sur une fonction polynomiale simple $$
+y = x_1^2 + x_2^3
+$$
 - Entraînement d'un modèle de régression symbolique à l'aide de la bibliothèque PySR.
 - Affichage des équations découvertes classées par complexité.
 - Récupération et affichage de la meilleure équation trouvée.
