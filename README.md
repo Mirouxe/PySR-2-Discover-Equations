@@ -6,9 +6,7 @@ La bibliothèque **PySR** a été développé par Miles Cranmer et d'autres coll
 
 ## Fonctionnalités
 
-- Génération de données d'entrée. L'exemple porte sur une fonction polynomiale simple $$
-y = x_1^2 + x_2^3
-$$
+- Génération de données d'entrée. L'exemple porte sur une fonction polynomiale simple : $y = x^2 + x^3$
 - Entraînement d'un modèle de régression symbolique à l'aide de la bibliothèque PySR.
 - Affichage des équations découvertes classées par complexité.
 - Récupération et affichage de la meilleure équation trouvée.
@@ -27,6 +25,3 @@ Vous pouvez installer les dépendances via `pip` :
 
 ```bash
 pip install numpy matplotlib pysr
-
-Pour installer pysr, il vous faudra dans un premier temps aller télécharger julia ici :
-https://julialang.org/downloads/
