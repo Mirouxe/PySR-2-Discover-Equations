@@ -10,6 +10,8 @@ La bibliothèque **PySR** a été développé par Miles Cranmer et d'autres coll
 - Récupération et affichage de la meilleure équation trouvée.
 - Visualisation des valeurs réelles et des prédictions du modèle sur un graphique.
 
+![image](https://github.com/user-attachments/assets/4fca99f9-4604-4d0d-bd7b-1e8e5c837fc3)
+
 ## Prérequis
 Avant d'exécuter le code, assurez-vous d'avoir installé les dépendances nécessaires :
 
