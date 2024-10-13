@@ -23,3 +23,6 @@ Vous pouvez installer les dépendances via `pip` :
 
 ```bash
 pip install numpy matplotlib pysr
+
+Pour installer pysr, il vous faudra dans un premier temps aller télécharger julia ici :
+https://julialang.org/downloads/
