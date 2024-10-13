@@ -1,49 +1,48 @@
-# Importer les bibliothèques nécessaires
+# Import the necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
 from pysr import PySRRegressor
 
-# Générer des données (par exemple, une fonction simple y = x1**2 + x2**3)
-X = np.random.randn(100, 1)  # Générer des données d'entrée avec 2 variables
-y = X[:, 0]**2 + X[:, 0]**3  # Générer des données de sortie suivant la fonction
+# Generate data (for example, a simple function y = x1**2 + x2**3)
+X = np.random.randn(100, 1)  # Generate input data with 2 variables
+y = X[:, 0]**2 + X[:, 0]**3  # Generate output data according to the function
 
-# Initialiser le modèle PySR
+# Initialize the PySR model
 model = PySRRegressor(
-    niterations=100,  # Nombre d'itérations pour la recherche évolutive
-    binary_operators=["+", "*", "-", "/"],  # Opérateurs que PySR peut utiliser
-    unary_operators=["cos", "exp", "sin"],  # Fonctions unaires que PySR peut utiliser
-    model_selection="best",  # Sélectionner le meilleur modèle en termes de précision
+    niterations=100,  # Number of iterations for the evolutionary search
+    binary_operators=["+", "*", "-", "/"],  # Operators that PySR can use
+    unary_operators=["cos", "exp", "sin"],  # Unary functions that PySR can use
+    model_selection="best",  # Select the best model in terms of accuracy
 )
 
-# Entraîner le modèle avec les données
+# Train the model with the data
 model.fit(X, y)
 
-# Afficher toutes les équations trouvées (par complexité croissante)
-print("Equations découvertes :")
+# Display all found equations (increasing complexity)
+print("Discovered equations:")
 print(model)
 
-# Obtenir la meilleure équation (le modèle avec le meilleur score)
+# Get the best equation (the model with the best score)
 best_model = model.get_best()
 
-# Afficher l'expression analytique de la meilleure équation
-print("\nMeilleure équation trouvée :")
+# Display the analytical expression of the best equation
+print("\nBest equation found:")
 print(best_model)
 
-# Prédire les valeurs avec le modèle découvert
+# Predict values with the discovered model
 y_pred = model.predict(X)
 
-# Tracer les vraies valeurs (y) et les prédictions (y_pred) en fonction de x1
+# Plot the true values (y) and the predictions (y_pred) as a function of x1
 plt.figure(figsize=(10, 6))
 
-# Tracer les vraies valeurs
-plt.scatter(X[:, 0], y, color='blue', marker='o', facecolors='none', label='Valeurs réelles (y)')
+# Plot the true values
+plt.scatter(X[:, 0], y, color='blue', marker='o', facecolors='none', label='True values (y): $y = x^2 + x^3$')
 
-# Tracer les prédictions du modèle
-plt.scatter(X[:, 0], y_pred, color='green', marker='x', label='Prédictions du modèle (y_pred)', alpha=0.7)
+# Plot the model predictions
+plt.scatter(X[:, 0], y_pred, color='green', marker='x', label='PySR predictions (y_pred)', alpha=0.7)
 
-plt.xlabel("x1 (Caractéristique d'entrée)")
-plt.ylabel("y / y_pred (Valeur de sortie)")
-plt.title("Comparaison des valeurs réelles et des prédictions du modèle PySR en fonction de x1")
+plt.xlabel("X (Input feature)")
+plt.ylabel("Y (Output value)")
+plt.title("Comparison of true values and PySR model predictions as a function of x")
 plt.legend()
 plt.show()
-
