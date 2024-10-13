@@ -1,6 +1,6 @@
 # Régression Symbolique avec PySR
 
-Ce projet utilise la régression symbolique pour découvrir des équations à partir de données générées aléatoirement. Il utilise la bibliothèque **PySR** pour effectuer une recherche évolutive sur des ensembles de données d'entrée et de sortie, en essayant de trouver la meilleure équation qui décrit la relation entre ces données.
+Ce projet utilise la régression symbolique pour découvrir des équations à partir de données générées aléatoirement. Il utilise la bibliothèque **PySR** pour effectuer une recherche évolutive sur des ensembles de données d'entrée et de sortie, en essayant de trouver la meilleure équation qui décrit la relation entre ces données. \n
 La bibliothèque **PySR** a été développé par Miles Cranmer et d'autres collaborateurs. Vous pouvez consulter le projet original sur son dépôt GitHub : [PySR GitHub.](https://github.com/MilesCranmer/PySR)
 
 ## Fonctionnalités
